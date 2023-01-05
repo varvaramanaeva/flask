@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Привеееееееееееееееееееееееееееетик
+{% endblock %}
+{% block body %}
+<h1> Hello, stop, goodbye </h1>
+{% for el in articles %}
+<div class="alert alert-secondary">
+    <h2>{{ el.title }}</h2>
+    <p><b>Дата создания: {{ el.date.date() }}</b></p>
+    <a href="/post/{{ el.id }}" class="btn btn-info">Детальнее</a>
+</div>
+{% endfor %}
+{% endblock %}
